@@ -1,15 +1,14 @@
  import axios from "axios";
-import express from 'express';
+// import express from 'express';
 
 
-const app = express();
 const apiUrl = process.env.REACT_APP_API_URL;
 
 axios.defaults.baseURL = apiUrl;
-
 // הוספת Interceptor שיתפוס שגיאות ב-response
 
 export default {
+  
   getTasks: async () => {
     try {
       const result = await axios.get(`${apiUrl}/items`);
@@ -73,4 +72,5 @@ export default {
     //TODO
     return {};
   },
+  
 };
