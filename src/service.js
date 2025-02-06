@@ -41,9 +41,10 @@ export default {
       );
     }
   },
-  putTasks: async (id, item) => {
+  setCompleted: async (id,isComplete ) => {
     try {
-      const result = await axios.put(`${apiUrl}/items/${id}`, item);
+      
+      const result = await axios.put(`${apiUrl}/items/${id}`,{id,isComplete});
       return result.data;
     } catch (error) {
       console.log(
@@ -64,9 +65,4 @@ export default {
     }
   },
 
-  setCompleted: async (id, isComplete) => {
-    console.log("setCompleted", { id, isComplete });
-    //TODO
-    return {};
-  },
 };
