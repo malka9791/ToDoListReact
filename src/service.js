@@ -21,7 +21,7 @@ export default {
 
   addTask: async (name) => {
     try {
-      const result = await axios.post(`${apiUrl}/items`, name);
+      const result = await axios.post(`${apiUrl}/items`, { name });
       return result.data;
     } catch (error) {
       console.log(
