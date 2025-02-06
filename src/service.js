@@ -43,13 +43,9 @@ export default {
   },
   setCompleted: async (id, isComplete) => {
     try {
-      const result = await axios.put(
-        `${apiUrl}/items/${id}`,
-        {
-          id,
-        },
-        { isComplete }
-      );
+      const result = await axios.put(`${apiUrl}/items/${id}`, {
+        isComplete,
+      });
       return result.data;
     } catch (error) {
       console.log(
