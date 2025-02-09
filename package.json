@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@api/render-api": "file:.api/apis/render-api",
-    "axios": "^1.6.3",
+    "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "react": "^18.2.0",
@@ -12,9 +11,11 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+   "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +32,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000/",
-  "type": "module"
+  "proxy": "http://localhost:5000/"
 }
